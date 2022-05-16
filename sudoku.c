@@ -84,10 +84,10 @@ for(int b = 0; b < 9 ; b++ ){
 
 List* get_adj_nodes(Node* n){
   
-List* list=createList();
-int i;
-int j;
-int numero = 1;
+ List* list=createList();
+ int i;
+ int j;
+ int numero = 1;
   for( i = 0 ; i < 9 ; i++){
     for(j = 0 ; j < 9 ; j++){
       if( n -> sudo[i][j] == 0){
@@ -95,12 +95,11 @@ int numero = 1;
         while(numero < 10){
         aux = copy(n);
         aux -> sudo[i][j] = numero;
-        is_valid(aux);
+        
         pushBack(list,aux);
+        is_valid(aux);
         numero++;
-  
         }
-       
       }
     }
   }
