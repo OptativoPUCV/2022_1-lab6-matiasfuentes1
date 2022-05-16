@@ -146,9 +146,8 @@ Node* DFS(Node* initial, int* cont){
       
     //printf("cont: %d\n",*cont);
   
-  return NULL;
 }
-
+ return NULL;
 }
 
 /*
