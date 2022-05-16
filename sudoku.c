@@ -89,9 +89,9 @@ List* list=createList();
 int i;
 int j;
 int numero = 1;
-  for(i=0;i<9;i++){
-    for(j=0;j<9;j++){
-      if(n->sudo[i][j] == 0){
+  for( i = 0 ; i < 9 ; i++){
+    for(j = 0 ; j < 9 ; j++){
+      if( n -> sudo[i][j] == 0){
        Node* aux = createNode();
         while(numero < 10){
         aux = copy(n);
@@ -127,8 +127,7 @@ Node* DFS(Node* initial, int* cont){
     Node * aux =(top(S));
     pop(S);
     
-    if (is_final(aux))
-    return aux;
+    if (is_final(aux)) return aux;
 
 List * adj = get_adj_nodes(aux);
 
@@ -138,7 +137,7 @@ List * adj = get_adj_nodes(aux);
       lista_aux = next(adj);
     }
     free(aux);
-    cont++;
+    (*cont)++;
         printf("cont: %d\n",*cont);
   }
   return NULL;
