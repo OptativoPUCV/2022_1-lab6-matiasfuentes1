@@ -170,3 +170,9 @@ sudoku.c:46:5: note: expected 'Node * {aka struct <anonymous> *}' but argument i
      ^~~~~~~~
 Compilation failed
 2cebb53
+do., 15 de may. de 2022 22:43:11: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  3|3
+total_score: 25/70
+42f5493
