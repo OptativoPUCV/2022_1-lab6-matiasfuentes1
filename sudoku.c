@@ -140,9 +140,9 @@ Node* DFS(Node* initial, int* cont){
       push(S,lista_aux);
       lista_aux = next(adj);
     }
-    
+
     free(aux);
-    (*cont)++;
+    cont++;
       
     //printf("cont: %d\n",*cont);
   
