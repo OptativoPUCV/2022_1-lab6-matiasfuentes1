@@ -46,15 +46,14 @@ void print_node(Node* n){
 int is_valid(Node* n){
   
 
-
+for(int i = 0; i < 9 ; i++ ){
   int validar_fila[10] = {0};
-  for(int i = 0; i < 9 ; i++ ){
- // for(int j = 0 ; j <9;j++){
-    if(validar_fila[n->sudo[i][0]]) return 0;
-    if(validar_fila[n->sudo[i][0]] == 0 ){
-      validar_fila[n->sudo[i][0]] = 1;
+  for(int j = 0 ; j <9;j++){
+    if(validar_fila[n->sudo[i][j]]) return 0;
+    if(validar_fila[n->sudo[i][j]] == 0 && n->sudo[i][j] != 0){
+      validar_fila[n->sudo[i][j]] = 1;
     }
-  //}
+  }
 }
 
 for(int x = 0; x < 9 ; x++ ){
