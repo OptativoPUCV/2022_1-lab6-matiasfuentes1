@@ -101,6 +101,7 @@ int numero = 1;
         }
         is_valid(aux); 
       }
+       
     }
   }
     return list;
@@ -127,14 +128,8 @@ Node* DFS(Node* initial, int* cont){
 
     Node * aux =(top(S));
     pop(S);
-    
-    if(aux == NULL){
-      return NULL;
-      
-    }else{
-      
-      if (is_final(aux))
-       return aux;
+
+      if (is_final(aux)) return aux;
 
        List * adj = get_adj_nodes(aux);
 
@@ -145,11 +140,12 @@ Node* DFS(Node* initial, int* cont){
       push(S,lista_aux);
       lista_aux = next(adj);
     }
+    
     free(aux);
     (*cont)++;
       
     //printf("cont: %d\n",*cont);
-  }
+  
   return NULL;
 }
 
