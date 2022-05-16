@@ -46,3 +46,20 @@ test.c:7:8: error: '_strdup' defined but not used [-Werror=unused-function]
 cc1.exe: all warnings being treated as errors
 Compilation failed
 9605d1d
+do., 15 de may. de 2022 22:20:03: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:0:
+sudoku.c: In function 'DFS':
+sudoku.c:135:7: error: this 'if' clause does not guard... [-Werror=misleading-indentation]
+       if (is_final(aux))
+       ^~
+sudoku.c:138:8: note: ...this statement, but the latter is misleadingly indented as if it is guarded by the 'if'
+        List * adj = get_adj_nodes(aux);
+        ^~~~
+sudoku.c:153:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+ea4b03f
