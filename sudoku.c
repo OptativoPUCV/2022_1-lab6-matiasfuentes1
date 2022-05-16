@@ -95,6 +95,7 @@ int numero = 1;
         while(numero < 10){
         aux = copy(n);
         aux -> sudo[i][j] = numero;
+        is_valid(aux);
         pushBack(list,aux);
         numero++;
   
@@ -118,6 +119,7 @@ int is_final(Node* n){
     return 1;
 }
 
+
 Node* DFS(Node* initial, int* cont){
  Stack* S = createStack();
   push(S,initial);
@@ -128,7 +130,9 @@ Node* DFS(Node* initial, int* cont){
     pop(S);
 
       if(aux == NULL){
+
         return NULL;
+
       }else{
 
       if (is_final(aux)) return aux;
