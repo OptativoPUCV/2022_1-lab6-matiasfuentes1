@@ -67,9 +67,9 @@ for(int x = 0; x < 9 ; x++ ){
   }
 }
 
-for(int a = 0; a < 9 ; a++ ){
+for(int b = 0; b < 9 ; b++ ){
   int validar_matrix[10] = {0};
-  int k = a , p;
+  int k = b , p;
    for( p = 0 ; p < 9 ; p++){
      int i=3*(k/3) + (p/3) ;
      int j=3*(k%3) + (p%3) ;
@@ -138,14 +138,16 @@ Node* DFS(Node* initial, int* cont){
        List * adj = get_adj_nodes(aux);
 
     Node * lista_aux = first (adj);
+    
     while(lista_aux){
+
       push(S,lista_aux);
       lista_aux = next(adj);
     }
     free(aux);
     (*cont)++;
       
-    printf("cont: %d\n",*cont);
+    //printf("cont: %d\n",*cont);
   }
   return NULL;
 }
