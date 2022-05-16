@@ -47,7 +47,7 @@ int is_valid(Node* n){
   
 
 for(int i = 0; i < 9 ; i++ ){
-  int validar_fila[10] = {0};
+  int *validar_fila =calloc(10,sizeof(int));
   for(int j = 0 ; j <9;j++){
     if(validar_fila[n->sudo[i][j]]) return 1;
     if(validar_fila[n->sudo[i][j]] == 0 && n->sudo[i][j] != 0){
@@ -57,7 +57,7 @@ for(int i = 0; i < 9 ; i++ ){
 }
 
 for(int x = 0; x < 9 ; x++ ){
-  int validar_colum[10] = {0};
+  int *validar_colum =calloc(10,sizeof(int));
   for(int z = 0 ; z <9;z++){
     if(validar_colum[n->sudo[x][z]] != 0) return 1;
     if(validar_colum[n->sudo[x][z]] == 0 && n->sudo[x][z] != 0){
@@ -67,7 +67,7 @@ for(int x = 0; x < 9 ; x++ ){
 }
 
 for(int b = 0; b < 9 ; b++ ){
-  int validar_matrix[10] = {0};
+  int *validar_matrix =calloc(10,sizeof(int));
   int k = b , p;
    for( p = 0 ; p < 9 ; p++){
      int i=3*(k/3) + (p/3) ;
