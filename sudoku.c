@@ -58,7 +58,7 @@ for(int i = 0; i < 9 ; i++ ){
 
 for(int x = 0; x < 9 ; x++ ){
   int *validar_colum =calloc(10,sizeof(int));
-  for(int z = 0 ; z <9;z++){
+  for(int z = 0 ; z <9 ; z++){
     if(validar_colum[n->sudo[z][x]] != 0) return 0;
     if(validar_colum[n->sudo[z][x]] == 0 && n->sudo[z][x] != 0){
      validar_colum[n->sudo[z][x]] = 1; 
@@ -72,7 +72,7 @@ for(int b = 0; b < 9 ; b++ ){
    for( p = 0 ; p < 9 ; p++){
      int i=3*(k/3) + (p/3) ;
      int j=3*(k%3) + (p%3) ;
-     if(validar_matrix[n->sudo[i][i]] != 0) return 0;
+     if(validar_matrix[n->sudo[i][j]] != 0) return 0;
      if(validar_matrix[n->sudo[i][j]] == 0 && n->sudo[i][j] != 0){
       validar_matrix[n->sudo[i][j]] = 1;
      }
