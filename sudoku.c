@@ -85,11 +85,9 @@ for(int b = 0; b < 9 ; b++ ){
 List* get_adj_nodes(Node* n){
   
  List* list=createList();
- int i;
- int j;
  int numero = 1;
-  for( i = 0 ; i < 9 ; i++){
-    for(j = 0 ; j < 9 ; j++){
+  for( int i = 0 ; i < 9 ; i++){
+    for(int j = 0 ; j < 9 ; j++){
       if( n -> sudo[i][j] == 0){
        Node* aux = createNode();
         while(numero < 10){
