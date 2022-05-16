@@ -139,7 +139,7 @@ List * adj = get_adj_nodes(aux);
     }
     free(aux);
     cont++;
-    
+        printf("cont: %d\n",*cont);
   }
   return NULL;
 }
