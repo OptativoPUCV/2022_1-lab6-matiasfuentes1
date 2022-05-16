@@ -98,11 +98,10 @@ int numero = 1;
         aux -> sudo[i][j] = numero;
         pushBack(list,aux);
         numero++;
-         is_valid(aux); 
+         is_valid(*aux); 
         }
        
       }
-       
     }
   }
     return list;

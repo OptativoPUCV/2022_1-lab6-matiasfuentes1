@@ -157,3 +157,16 @@ do., 15 de may. de 2022 22:41:03:
  tests:  3|3
 total_score: 25/70
 6f61e13
+do., 15 de may. de 2022 22:42:52: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:0:
+sudoku.c: In function 'get_adj_nodes':
+sudoku.c:101:19: error: incompatible type for argument 1 of 'is_valid'
+          is_valid(*aux);
+                   ^
+sudoku.c:46:5: note: expected 'Node * {aka struct <anonymous> *}' but argument is of type 'Node {aka struct <anonymous>}'
+ int is_valid(Node* n){
+     ^~~~~~~~
+Compilation failed
+2cebb53
