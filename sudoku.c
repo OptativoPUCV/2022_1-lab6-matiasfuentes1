@@ -95,9 +95,8 @@ List* get_adj_nodes(Node* n){
         while(numero < 10){
         aux = copy(n);
         aux -> sudo[i][j] = numero;
-        
-        pushBack(list,aux);
         is_valid(aux);
+        pushBack(list,aux);
         numero++;
         }
       }
@@ -109,6 +108,15 @@ List* get_adj_nodes(Node* n){
 
 int is_final(Node* n){
   int i;
+  int j;
+  for(i=0;i<9;i++){
+    for(j=0;j<9;j++){
+      if(n->sudo[i][j]==0)
+        return 0;
+    }
+  }
+    return 1;
+}//ok
   int j;
   for(i=0;i<9;i++){
     for(j=0;j<9;j++){

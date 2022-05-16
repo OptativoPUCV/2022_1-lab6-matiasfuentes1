@@ -272,3 +272,24 @@ do., 15 de may. de 2022 23:17:33:
  tests:  6|2
 total_score: 45/70
 c1921e2
+do., 15 de may. de 2022 23:19:21: 
+ sudoku.c | 12 ++++++++++--
+ 1 file changed, 10 insertions(+), 2 deletions(-)
+In file included from test.c:5:0:
+sudoku.c:121:3: error: expected identifier or '(' before 'for'
+   for(i=0;i<9;i++){
+   ^~~
+sudoku.c:121:12: error: expected '=', ',', ';', 'asm' or '__attribute__' before '<' token
+   for(i=0;i<9;i++){
+            ^
+sudoku.c:121:16: error: expected '=', ',', ';', 'asm' or '__attribute__' before '++' token
+   for(i=0;i<9;i++){
+                ^~
+sudoku.c:126:5: error: expected identifier or '(' before 'return'
+     return 1;
+     ^~~~~~
+sudoku.c:127:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+Compilation failed
+3b74777
