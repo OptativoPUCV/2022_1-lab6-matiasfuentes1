@@ -96,7 +96,7 @@ List* get_adj_nodes(Node* n){
         while(numero < 10){
         aux = copy(n);
         aux -> sudo[i][j] = numero;
-        is_valid(aux);
+       if( is_valid(aux));
         pushBack(list,aux);
         numero++;
         }
