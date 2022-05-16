@@ -119,7 +119,7 @@ int is_final(Node* n){
 }
 
 Node* DFS(Node* initial, int* cont){
-  Stack * S = createStack();
+ Stack * S = createStack();
   push(S,initial);
 
   while(get_size(S) != 0){
@@ -127,9 +127,15 @@ Node* DFS(Node* initial, int* cont){
     Node * aux =(top(S));
     pop(S);
     
-    if (is_final(aux)) return aux;
+    if(aux == NULL){
+      return NULL;
+      
+    }else{
+      
+      if (is_final(aux))
+       return aux;
 
-List * adj = get_adj_nodes(aux);
+       List * adj = get_adj_nodes(aux);
 
     Node * lista_aux = first (adj);
     while(lista_aux){
@@ -138,7 +144,8 @@ List * adj = get_adj_nodes(aux);
     }
     free(aux);
     (*cont)++;
-        printf("cont: %d\n",*cont);
+      
+    printf("cont: %d\n",*cont);
   }
   return NULL;
 }
