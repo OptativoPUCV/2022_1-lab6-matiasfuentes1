@@ -59,9 +59,9 @@ for(int i = 0; i < 9 ; i++ ){
 for(int x = 0; x < 9 ; x++ ){
   int *validar_colum =calloc(10,sizeof(int));
   for(int z = 0 ; z <9;z++){
-    if(validar_colum[n->sudo[x][z]] != 0) return 0;
-    if(validar_colum[n->sudo[x][z]] == 0 && n->sudo[x][z] != 0){
-     validar_colum[n->sudo[x][z]] = 1; 
+    if(validar_colum[n->sudo[z][x]] != 0) return 0;
+    if(validar_colum[n->sudo[z][x]] == 0 && n->sudo[z][x] != 0){
+     validar_colum[n->sudo[z][x]] = 1; 
     }
   }
 }
