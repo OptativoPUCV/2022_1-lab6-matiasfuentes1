@@ -80,3 +80,20 @@ sudoku.c:155:1: error: control reaches end of non-void function [-Werror=return-
 cc1.exe: all warnings being treated as errors
 Compilation failed
 2365f94
+do., 15 de may. de 2022 22:28:35: 
+ sudoku.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:5:0:
+sudoku.c: In function 'DFS':
+sudoku.c:136:7: error: this 'if' clause does not guard... [-Werror=misleading-indentation]
+       if (is_final(aux))
+       ^~
+sudoku.c:139:8: note: ...this statement, but the latter is misleadingly indented as if it is guarded by the 'if'
+        List * adj = get_adj_nodes(aux);
+        ^~~~
+sudoku.c:156:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+874c255

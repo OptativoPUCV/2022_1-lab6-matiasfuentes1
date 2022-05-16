@@ -99,6 +99,7 @@ int numero = 1;
         pushBack(list,aux);
         numero++;
         }
+        is_valid(aux); 
       }
     }
   }
